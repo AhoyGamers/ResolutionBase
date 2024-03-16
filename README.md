@@ -6,5 +6,7 @@ Made in Godot 3.5.3.
 License with Unlicense. Do whatever you want with it.
 
 Notes:
--If you do not want the camera zoom to change, just remove the script from the Camera2D Node. Be aware this means the player will see more or less of the scene if they change the resolution. 
+-If you do not want the camera zoom to change, just remove the script from the Camera2D Node. Be aware this means the player will see more or less of the scene if they change the resolution.
+
+
 -The Pause and Settings menus are intended to only have a single instance from the "GUI" node. They will stay hidden and detect the player pressing the pause button. Add the GUI Node to every new level if you want the player to be able to pause and change settings there. Do not add the settings scenes.
