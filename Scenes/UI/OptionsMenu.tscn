@@ -1,0 +1,80 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/UI/Resolution.gd" type="Script" id=1]
+
+[node name="Resolution" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.32549, 0.439216, 0.568627, 1 )
+
+[node name="Options" type="VBoxContainer" parent="."]
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+alignment = 1
+
+[node name="ResolutionContainer" type="HBoxContainer" parent="Options"]
+margin_top = 100.0
+margin_right = 512.0
+margin_bottom = 120.0
+
+[node name="Resolution" type="Label" parent="Options/ResolutionContainer"]
+margin_top = 3.0
+margin_right = 72.0
+margin_bottom = 17.0
+text = "Resolution:"
+
+[node name="OptionButton" type="OptionButton" parent="Options/ResolutionContainer"]
+margin_left = 76.0
+margin_right = 512.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="FullScreenContainer" type="HBoxContainer" parent="Options"]
+margin_top = 124.0
+margin_right = 512.0
+margin_bottom = 148.0
+
+[node name="FullScreen" type="Label" parent="Options/FullScreenContainer"]
+margin_top = 5.0
+margin_right = 66.0
+margin_bottom = 19.0
+text = "FullScreen"
+
+[node name="FullScreenToggle" type="CheckBox" parent="Options/FullScreenContainer"]
+margin_left = 70.0
+margin_right = 94.0
+margin_bottom = 24.0
+
+[node name="VSyncContainer" type="HBoxContainer" parent="Options"]
+margin_top = 152.0
+margin_right = 512.0
+margin_bottom = 176.0
+
+[node name="Vsync" type="Label" parent="Options/VSyncContainer"]
+margin_top = 5.0
+margin_right = 37.0
+margin_bottom = 19.0
+text = "VSync"
+
+[node name="VSyncToggle" type="CheckBox" parent="Options/VSyncContainer"]
+margin_left = 41.0
+margin_right = 65.0
+margin_bottom = 24.0
+
+[node name="Back" type="Button" parent="Options"]
+margin_top = 180.0
+margin_right = 512.0
+margin_bottom = 200.0
+text = "Back"
+
+[connection signal="item_selected" from="Options/ResolutionContainer/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="toggled" from="Options/FullScreenContainer/FullScreenToggle" to="." method="_on_FullScreenToggle_toggled"]
+[connection signal="toggled" from="Options/VSyncContainer/VSyncToggle" to="." method="_on_VSyncToggle_toggled"]
+[connection signal="pressed" from="Options/Back" to="." method="_on_Back_pressed"]
