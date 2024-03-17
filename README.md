@@ -11,4 +11,4 @@ Notes:
 
 -The Pause and Settings menus are intended to only have a single instance from the "GUI" node. They will stay hidden and detect the player pressing the pause button. Add the GUI Node to every new level if you want the player to be able to pause and change settings there. Do not add the settings scenes.
 
--Make sure the correct size flags are selected for all child control nodes. Typically "Fill" and "Expand" are all you need, but there might be extra "Expand" toggles you need to press.
+-Make sure the correct size flags are selected for all control nodes and their children. Typically "Fill" and "Expand" are all you need, but there might be extra "Expand" toggles you need to press.
