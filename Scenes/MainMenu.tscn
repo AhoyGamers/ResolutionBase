@@ -22,21 +22,28 @@ __meta__ = {
 }
 
 [node name="Start" type="Button" parent="MainMenu"]
-margin_top = 55.0
 margin_right = 512.0
-margin_bottom = 75.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 512, 56 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Start"
+expand_icon = true
 
 [node name="Settings" type="Button" parent="MainMenu"]
-margin_top = 95.0
+margin_top = 76.0
 margin_right = 512.0
-margin_bottom = 115.0
+margin_bottom = 133.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Settings"
 
 [node name="Quit" type="Button" parent="MainMenu"]
-margin_top = 135.0
+margin_top = 153.0
 margin_right = 512.0
-margin_bottom = 155.0
+margin_bottom = 210.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Quit"
 
 [node name="SettingsMenu" parent="." instance=ExtResource( 2 )]
